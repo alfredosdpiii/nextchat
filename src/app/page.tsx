@@ -11,8 +11,8 @@ export default async function Home() {
   return (
     <main className="p-5">
       <h1 className="text-4xl font-bold">Welcome To GPT Chat</h1>
-      {!session?.user?.email && <div>You need to log in to use this chat.</div>}
-      {session?.user?.email && (
+      {!session?.user && <div>You need to log in to use this chat.</div>}
+      {session?.user && (
         <>
           <Suspense fallback={<div>Loading Previous Chats</div>}>
             <PreviousChats />
