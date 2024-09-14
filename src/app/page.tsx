@@ -5,7 +5,6 @@ import Chat from "@/app/components/Chat";
 
 export default async function Home() {
   const session = await getServerSession();
-  console.log(session.user);
 
   return (
     <main className="p-5">
